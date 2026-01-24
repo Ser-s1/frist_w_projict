@@ -1,11 +1,3 @@
-# Flutter weak1 project
-
-<<<<<<< HEAD
-A new Flutter project.
-# frist_w_projict
-# frist_w_projict
-# frist_w_projict
-=======
 # Saudi Tourism App
 <p>A mobile application developed using Flutter and Dart designed to showcase of Saudi Arabia’s top tourist destinations.</p>
 
