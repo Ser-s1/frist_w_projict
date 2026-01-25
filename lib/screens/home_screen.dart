@@ -49,23 +49,79 @@ class HomeScreen extends StatelessWidget{
       ),
 
       body:Container(
-        decoration: BoxDecoration(
+      width: screenWidth,
+      height: screenHeight, 
+      decoration: BoxDecoration(
         image: DecorationImage(
         image: AssetImage("assets/theam4.jpg"),
         fit: BoxFit.cover, 
           ),
-        ),
-        width: double.infinity,
-        height: double.infinity,
+      ),
+      child:Column(
+      children: [
+      Container(
+      width: screenWidth*0.9,
+      height: screenHeight*0.374, 
+      child: Column(
+        children: [
+          Container(
+          padding: EdgeInsets.only(top:12),
+          margin: EdgeInsets.only(top: 5),
+          width: screenWidth*0.7,
+          height:screenHeight*0.07,
+          decoration: BoxDecoration(
+                  image: DecorationImage(
+                  image: AssetImage("assets/theam_box2.png"),
+                  fit: BoxFit.cover, 
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(5,5),
+                      blurRadius: 4,
+                      
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(30),
+                ),
+          child:Text("تطبيق السياحة السعودية \n",textAlign: TextAlign.center,selectionColor: Color.fromARGB(0, 81, 40, 2),textScaleFactor: 1.7,)
+          ),
+          Container(
+          padding: EdgeInsets.only(top:5),
+          margin: EdgeInsets.only(top: 20),
+          width: screenWidth*0.7,
+          height:screenHeight*0.27,
+          decoration: BoxDecoration(
+                  image: DecorationImage(
+                  image: AssetImage("assets/theam_box2.png"),
+                  fit: BoxFit.cover, 
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(5,5),
+                      blurRadius: 4,
+                      
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(30),
+                ),
+          child:Text("\nتطبيق السياحة السعودية تطبيق يتيح لك مشاهدة احدث الرحلات الموجودة في المملكة مع وصف لها \nقريبا: ستنضيف امكانية الاطلاع على الرحلات السياحية و التسجيل فيها ",textAlign: TextAlign.center,selectionColor: Color.fromARGB(0, 81, 40, 2),textScaleFactor: 1.6,)
+          )
+        ],
+      )
+      ),
+      Container(
+        width: screenWidth,
+        height: screenHeight*0.55,
         child:Padding(
-        padding: const EdgeInsetsGeometry.all(25),
-          child: ListView.builder(
+            padding:const EdgeInsetsGeometry.all(20),
+            child: ListView.builder(
+            scrollDirection: Axis.horizontal,
             itemCount: 6,
             itemBuilder: (context, index) {
           return Container(
-            margin: EdgeInsets.all(10),
-            width: screenWidth,
-            height: screenHeight * 0.45,
+            margin: EdgeInsets.all(20),
+            width: screenWidth * 0.8,
+            height: screenHeight * 0.5,
             decoration: BoxDecoration(
                   image: DecorationImage(
                   image: AssetImage("assets/theam_box2.png"),
@@ -105,7 +161,8 @@ class HomeScreen extends StatelessWidget{
             ),
             Container(
               padding: EdgeInsets.only(left: 20),
-            child:Text("${Paragraph[index]}")
+            child:Text("${Paragraph[index]}",textAlign: TextAlign.center,)
+            
             )
             ],
             ),
@@ -114,8 +171,14 @@ class HomeScreen extends StatelessWidget{
             },
           
           ),
+            
+        
         )
-      ,
+        
+      )
+      ]
+      )
+      
       )
     );
   }

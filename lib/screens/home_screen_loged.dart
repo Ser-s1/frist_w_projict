@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_app/main.dart';
+import 'package:flutter_app/screens/home_screen.dart';
 import 'package:flutter_app/screens/login_screen.dart';
 import 'package:flutter_app/screens/reregistration_secrin.dart';
 import 'package:flutter_app/funcions/data_control.dart';
@@ -34,24 +36,90 @@ class HomeScreenLoged extends StatelessWidget{
   centerTitle: true,
 ),
        
-      body:Container(
-        decoration: BoxDecoration(
+ body:Container(
+      width: screenWidth,
+      height: screenHeight, 
+      decoration: BoxDecoration(
         image: DecorationImage(
         image: AssetImage("assets/theam4.jpg"),
         fit: BoxFit.cover, 
           ),
-        ),
-        width: double.infinity,
-        height: double.infinity,
+      ),
+      child:Column(
+      children: [
+      Container(
+      width: screenWidth*0.9,
+      height: screenHeight*0.374, 
+      child: Column(
+        children: [
+          Container(
+          padding: EdgeInsets.only(top:12),
+          margin: EdgeInsets.only(top: 5),
+          width: screenWidth*0.7,
+          height:screenHeight*0.07,
+          decoration: BoxDecoration(
+                  image: DecorationImage(
+                  image: AssetImage("assets/theam_box2.png"),
+                  fit: BoxFit.cover, 
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(5,5),
+                      blurRadius: 4,
+                      
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(30),
+                ),
+          child:Text("مرحبا بك في تطبيقنا\n",textAlign: TextAlign.center,selectionColor: Color.fromARGB(0, 81, 40, 2),textScaleFactor: 1.7,)
+          ),
+          Container(
+         
+          margin: EdgeInsets.only(top: 20),
+          width: screenWidth*0.27,
+          height:screenHeight*0.07,
+          decoration: BoxDecoration(
+                  image: DecorationImage(
+                  image: AssetImage("assets/theam_box2.png"),
+                  fit: BoxFit.cover, 
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      
+                      blurRadius: 10,
+                      
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                  child:FilledButton(
+                            onPressed: (
+                              
+                            ) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => HomeScreen()), 
+                              );
+                            },
+                            child: Icon(Icons.hail),
+                          ),          
+        )
+        ],
+      )
+      ),
+      Container(
+        width: screenWidth,
+        height: screenHeight*0.55,
         child:Padding(
-        padding: const EdgeInsetsGeometry.all(25),
-          child: ListView.builder(
+            padding:const EdgeInsetsGeometry.all(20),
+            child: ListView.builder(
+            scrollDirection: Axis.horizontal,
             itemCount: 6,
             itemBuilder: (context, index) {
           return Container(
-            margin: EdgeInsets.all(10),
-            width: screenWidth,
-            height: screenHeight * 0.45,
+            margin: EdgeInsets.all(20),
+            width: screenWidth * 0.8,
+            height: screenHeight * 0.5,
             decoration: BoxDecoration(
                   image: DecorationImage(
                   image: AssetImage("assets/theam_box2.png"),
@@ -83,7 +151,7 @@ class HomeScreenLoged extends StatelessWidget{
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 5),
+              padding: EdgeInsets.only(top:10),
               height: screenHeight * 0.05,
               decoration: BoxDecoration(
               ),
@@ -91,7 +159,8 @@ class HomeScreenLoged extends StatelessWidget{
             ),
             Container(
               padding: EdgeInsets.only(left: 20),
-            child:Text("${Paragraph[index]}")
+            child:Text("${Paragraph[index]}",textAlign: TextAlign.center,)
+            
             )
             ],
             ),
@@ -100,8 +169,14 @@ class HomeScreenLoged extends StatelessWidget{
             },
           
           ),
+            
+        
         )
-      ,
+        
+      )
+      ]
+      )
+      
       )
       );
   }
