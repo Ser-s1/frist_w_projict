@@ -12,8 +12,8 @@ class HomeScreen extends StatelessWidget{
     var screenHeight = MediaQuery.sizeOf(context).height;
  
     List touristDestination = ["assets/sin.jpg","assets/Asir.png","assets/my_projict.webp","assets/qdyah.jpg","assets/drya.jpg","assets/jeda.jpg"];
-    List Title = ["سجل معنا","منتزه السودة (عسير)","العلا","منتزه القدية","الدرعية التاريخية","منطقة البلد بجدة"];
-    List Paragraph = ["سجل في التطبيق لكي تتمكن من حجز رحلات في مناطق المملكة السياحية"
+    List title = ["سجل معنا","منتزه السودة (عسير)","العلا","منتزه القدية","الدرعية التاريخية","منطقة البلد بجدة"];
+    List paragraph = ["سجل في التطبيق لكي تتمكن من حجز رحلات في مناطق المملكة السياحية"
     ,"هي قمة المملكة الشاهقة التي تعانق السحاب وتكسوها غابات العرعر الكثيفة طوال العام. تتميز بأجوائها الباردة ومنتزهاتها الطبيعية التي توفر إطلالات بانورامية ساحرة على جبال عسير."
     ,"متحف طبيعي مفتوح يجمع بين عظمة الجبال الرملية وكنوز الحضارات القديمة كمدائن صالح. وجهة عالمية تمزج بين هدوء الصحراء، الفنون المعاصرة، والرفاهية التي تحاكي عبق التاريخ."
     ,"عاصمة الترفيه والرياضة المستقبلية التي تُبنى وسط منحدرات جبال طويق المهيبة بالرياض. تعد بتقديم تجارب استثنائية عالمية من خلال مدن الألعاب، الملاعب الرياضية، والأنشطة الثقافية."
@@ -104,14 +104,14 @@ class HomeScreen extends StatelessWidget{
                   ],
                   borderRadius: BorderRadius.circular(30),
                 ),
-          child:Text("\nتطبيق السياحة السعودية تطبيق يتيح لك مشاهدة احدث الرحلات الموجودة في المملكة مع وصف لها \nقريبا: ستنضيف امكانية الاطلاع على الرحلات السياحية و التسجيل فيها ",textAlign: TextAlign.center,selectionColor: Color.fromARGB(0, 81, 40, 2),textScaleFactor: 1.6,)
+          child:Text("\nتطبيق السياحة السعودية تطبيق يتيح لك مشاهدة احدث الرحلات الموجودة في المملكة مع وصف لها \nقريبا: ستنضيف امكانية الاطلاع على الرحلات السياحية و التسجيل فيها ",textAlign: TextAlign.center,selectionColor: Color.fromARGB(0, 81, 40, 2),textScaleFactor: 1.5,)
           )
         ],
       )
       ),
-      Container(
+      SizedBox(
         width: screenWidth,
-        height: screenHeight*0.55,
+        height: screenHeight*0.5,
         child:Padding(
             padding:const EdgeInsetsGeometry.all(20),
             child: ListView.builder(
@@ -153,15 +153,14 @@ class HomeScreen extends StatelessWidget{
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top:10),
-              height: screenHeight * 0.05,
+              padding: EdgeInsets.only(top:2),
               decoration: BoxDecoration(
               ),
-              child:Text("${Title[index]}")
+              child:Text("${title[index]}")
             ),
             Container(
-              padding: EdgeInsets.only(left: 20),
-            child:Text("${Paragraph[index]}",textAlign: TextAlign.center,)
+              padding: EdgeInsets.only(left: 5),
+            child:Text("${paragraph[index]}",textAlign: TextAlign.center,textScaleFactor: 0.8)
             
             )
             ],

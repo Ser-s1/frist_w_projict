@@ -109,7 +109,7 @@ class HomeScreenLoged extends StatelessWidget{
       ),
       Container(
         width: screenWidth,
-        height: screenHeight*0.55,
+        height: screenHeight*0.5,
         child:Padding(
             padding:const EdgeInsetsGeometry.all(20),
             child: ListView.builder(
@@ -159,7 +159,7 @@ class HomeScreenLoged extends StatelessWidget{
             ),
             Container(
               padding: EdgeInsets.only(left: 20),
-            child:Text("${Paragraph[index]}",textAlign: TextAlign.center,)
+            child:Text("${Paragraph[index]}",textAlign: TextAlign.center,textScaleFactor: 0.8)
             
             )
             ],

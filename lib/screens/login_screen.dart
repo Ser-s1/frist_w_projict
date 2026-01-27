@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/funcions/data_control.dart';
 import 'package:flutter_app/screens/reregistration_secrin.dart';
 import 'package:flutter_app/screens/home_screen_loged.dart';
-import 'dart:io';
+import 'package:flutter_app/modies/api.dart';
+
+
 TextEditingController Name = TextEditingController();
 TextEditingController password = TextEditingController();
 Customrs cust = Customrs(name:"", password:"");
+DataSave dshbogila = DataSave();
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
   String name = Name.text;
@@ -83,7 +86,6 @@ class LoginScreen extends StatelessWidget {
         child:
          TextField(
           controller: password,
-
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             labelText: 'Password',
@@ -102,8 +104,9 @@ class LoginScreen extends StatelessWidget {
                   Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomeScreenLoged()), 
+                  builder: (context) => HomeScreenLoged()),
                 );
+                dshbogila.saveData(name:username,password: pass);
                 name = username;
                 }
                 
