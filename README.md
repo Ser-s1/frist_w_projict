@@ -13,14 +13,14 @@
 <p></p>Custom Data Management: Backend logic implemented via a Customrs class to handle user data, existence checks, and password verification.</p>
 
 # Home Screen
-<img width="666" height="928" alt="home_screen" src="https://github.com/user-attachments/assets/12ab8801-89b8-4d61-b18f-fd3e89393ab2" />
+<img width="250" height="450" alt="home_screen" src="https://github.com/user-attachments/assets/12ab8801-89b8-4d61-b18f-fd3e89393ab2" />
 
 # Registriton Screen
-<img width="672" height="931" alt="registr" src="https://github.com/user-attachments/assets/9c4793db-7bbc-49ec-83c5-79e79ab9e85a" />
+<img width="250" height="450" alt="registr" src="https://github.com/user-attachments/assets/9c4793db-7bbc-49ec-83c5-79e79ab9e85a" />
 
 # Login 
-<img width="667" height="927" alt="login" src="https://github.com/user-attachments/assets/e876313b-1992-42cd-b7bd-f87facfb9bca" />
+<img width="250" height="450" alt="login" src="https://github.com/user-attachments/assets/e876313b-1992-42cd-b7bd-f87facfb9bca" />
 
 # User Home Screen
-<img width="670" height="936" alt="home_screen_login" src="https://github.com/user-attachments/assets/cf82ce96-eca1-4845-9f59-4f1723c83a41" />
+<img width="250" height="450" alt="home_screen_login" src="https://github.com/user-attachments/assets/cf82ce96-eca1-4845-9f59-4f1723c83a41" />
 
